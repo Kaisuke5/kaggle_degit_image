@@ -28,7 +28,7 @@ test_x = np.asarray(data[2], np.float32)
 print train_x[0].dtype,train_y.dtype
 
 NN = model.degit_network(units=500,gpu=args.gpu)
-NN.fit(train_x,train_y,n_epoch=1,batchsize=200)
+NN.fit(train_x,train_y,n_epoch=100,batchsize=200)
 result = NN.predict(test_x)
 print len(result)
 
